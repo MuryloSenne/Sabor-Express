@@ -1,18 +1,20 @@
 import os
 
+def exibir_nome_do_programa():
+    print('Ｓａｂｏｒ Ｅｘｐｒｅｓｓ\n')
 
-print('Ｓａｂｏｒ Ｅｘｐｒｅｓｓ\n')
-
-print('1. Cadastrar Restaurante')
-print('2. Listar Restaurante')
-print('3. Ativar Restaurante')
-print('4. Sair\n')
+def exibir_opcoes():
+    print('1. Cadastrar Restaurante')
+    print('2. Listar Restaurante')
+    print('3. Ativar Restaurante')
+    print('4. Sair\n')
+    
 
 def finalizar_app():
     os.system('cls')
     print('Finalizando o app\n')
 
-
+opcao_escolhida = 
 
 
 
@@ -28,4 +30,13 @@ elif opcao_escolhida == 3:
     
 else:
     finalizar_app()
+
+def main():
+    exibir_nome_do_programa()
+    exibir_opcoes()
+
+
+
+if __name__ == '__main__'
+    main()
 
