@@ -5,15 +5,24 @@ restaurantes = [{'Nome':'Praça', 'categoria':'Japones','ativo':False},
                 {'Nome':'Cantina', 'categoria':'Italiana','ativo':False}]
 
 def exibir_nome_do_programa():
+  """
+  EXIBI O NOME DO PROGRAMA
+  """
     print('Ｓａｂｏｒ Ｅｘｐｒｅｓｓ\n')
 
 def exibir_opcoes():
+  """
+  EXIBI QUAIS OPÇOES O USARIO PODE ESCOLHER
+  """
     print('1. Cadastrar restaurante')
     print('2. Listar restaurantes')
     print('3. Alternar estado do restaurante')
     print('4. Sair\n')
 
 def finalizar_app():
+  """
+  FINALIZA O APP
+  """
     exibir_subtitulo('Finalizar app')
 
 def voltar_ao_menu_principal():
@@ -21,6 +30,7 @@ def voltar_ao_menu_principal():
     main()
 
 def opcao_invalida():
+  """EXIBIR MENSAGEM DE OPÇÃO INVALIDA CASO OPÇOES NAO SEJA EXISTENTE"""
     print('Opção inválida!\n')
     voltar_ao_menu_principal()
 
