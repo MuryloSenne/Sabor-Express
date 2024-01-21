@@ -1,6 +1,8 @@
 import os
 
-restaurantes = ['Pizza', 'Sushi']
+restaurantes = [{'Nome':'Praça', 'categoria':'Japones','ativo':False}, 
+                {'Nome':'Pizza suprema', 'categoria':'Pizza','ativo':True},
+                {'Nome':'Cantina', 'categoria':'Italiana','ativo':False}]
 
 def exibir_nome_do_programa():
     print('Ｓａｂｏｒ Ｅｘｐｒｅｓｓ\n')
@@ -30,18 +32,23 @@ def exibir_subtitulos(texto):
 
 def cadastrar_novo_restaurante():
     exibir_subtitulos('Cadastro de novos restaurantes')
+
     nome_do_restaurante = input('Digite o Nome do Restaurante que deseja cadastrar: ')
     restaurantes.append(nome_do_restaurante)
     print(f'O retaurante {nome_do_restaurante} foi cadastrado com sucesso!!!\n')
-    
+
     voltar_ao_menu_principal()
-    
+
 
 def lista_restaurantes():
     exibir_subtitulos('Listando os restaurantes')
 
     for restaurante in restaurantes:
-        print(f'.{restaurante}')
+      
+        nome_restaurante = restaurante['Nome']
+        categoria = restaurante['categoria']
+        ativos = restaurante['ativo']
+        print(f' - {nome_restaurante} | {categoria} | {ativos}')
 
 
     voltar_ao_menu_principal()
@@ -60,7 +67,7 @@ def escolher_opcao():
             print('ativar restaurante')
 
         elif opcao_escolhida == 4:
-            print('Finalizar app')       
+            print('Finalizar app')
 
         else:
             opcao_invalida()
@@ -75,7 +82,5 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
 
 
